@@ -1,0 +1,86 @@
+.projectCardBox {
+  display: flex;
+  width: 68.5rem;
+  padding: calc(var(--header) + 1rem) 2rem 1rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--medium-yellow);
+  box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.6);
+  list-style: none;
+  scroll-snap-align: center;
+}
+
+.projectCard:not(:first-child) {
+  margin-left: -4.5rem;
+}
+
+.projectImg {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* Card */
+  .projectCardBox {
+    position: absolute;
+    top: 17rem;
+    right: calc(40% - calc(70dvh - 5.25rem));
+    width: fit-content;
+    padding: initial;
+  }
+
+  .projectCard {
+    height: calc(70dvh - 5.25rem);
+    width: 17.5rem;
+    border-radius: 1rem;
+    box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.9);
+  }
+
+  .projectCard:not(:first-child) {
+    margin-left: -8rem;
+  }
+
+  .projectCard:hover {
+    z-index: 3;
+    transform: translateY(-2rem);
+    transition: 0.4s ease-out;
+  }
+
+  .projectCard:hover ~ .projectCard {
+    position: relative;
+    transform: translateX(3rem);
+    transition: 0.4s ease-out;
+  }
+
+  .projectImg {
+    border-radius: 1rem;
+  }
+
+  /* pseudo class for fade-top & fade-left animation (68/78) */
+  .projectCardBox::before {
+    content: "";
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    height: 128%;
+    width: 122%;
+    background: var(--medium-yellow);
+    animation: fade-right 0.5s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Keyframes */
+  @keyframes fade-right {
+    100% {
+      width: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+:root {
+  --black: rgb(10, 10, 10);
+  --grey: rgb(120, 120, 120);
+  --light-grey: rgb(238, 238, 238);
+  --white: rgb(245, 245, 245);
+
+  --toastify-color-success: rgb(238, 187, 35);
+  --toastify-color-error: rgb(233, 52, 52);
+
+  --medium-yellow: rgb(238, 187, 35);
+  --red: rgb(233, 52, 52);
+
+  --main-font: Arial, Helvetica, sans-serif;
+
+  --header: 4rem;
+}

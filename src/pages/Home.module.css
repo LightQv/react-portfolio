@@ -1,0 +1,61 @@
+/* Home */
+.homePage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100%;
+  background: var(--medium-yellow);
+  color: var(--white);
+  z-index: 10;
+}
+
+.homePage a {
+  text-decoration: none;
+}
+
+.welcomePic {
+  width: 12rem;
+  border-radius: 50%;
+  border: 1px solid var(--dark-yellow);
+  margin-top: 0.5rem;
+}
+
+.welcomeHeadline,
+.welcomeTitle,
+.welcomeSubTitle {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.welcomeTitle {
+  font-size: 3.5rem;
+}
+
+.welcomeSubTitle {
+  font-size: 1rem;
+}
+
+.noSubTitle {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .welcomePic {
+    margin-top: 1rem;
+  }
+
+  .welcomePic:hover {
+    transform: scale(1.03);
+  }
+
+  .welcomeTitle {
+    font-size: 5rem;
+  }
+
+  .welcomeSubTitle {
+    font-size: 1.5rem;
+  }
+}
