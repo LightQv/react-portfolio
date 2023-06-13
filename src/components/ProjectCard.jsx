@@ -3,6 +3,7 @@ import wildfest from "../assets/image/projects/wildfest.png";
 import pokedex from "../assets/image/projects/pokedex.png";
 import keskonregarde from "../assets/image/projects/keskonregarde.png";
 import animalz from "../assets/image/projects/animalz.png";
+import discovery from "../assets/image/projects/discovery.png";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({
@@ -10,11 +11,13 @@ export default function ProjectCard({
   pokedexIsActive,
   keskonregardeIsActive,
   animalzIsActive,
+  discoveryIsActive,
   setCardIsActive,
   setWildIsActive,
   setPokedexIsActive,
   setKeskonregardeIsActive,
   setAnimalzIsActive,
+  setDiscoveryIsActive,
 }) {
   // Use states to trigger the right content based on which card is selected
   const handleWildMouse = () => {
@@ -23,6 +26,7 @@ export default function ProjectCard({
     setKeskonregardeIsActive(false);
     setAnimalzIsActive(false);
     setWildIsActive(true);
+    setDiscoveryIsActive(false);
   };
 
   const handlePokedexMouse = () => {
@@ -31,6 +35,7 @@ export default function ProjectCard({
     setKeskonregardeIsActive(false);
     setAnimalzIsActive(false);
     setPokedexIsActive(true);
+    setDiscoveryIsActive(false);
   };
 
   const handleKeskonregardeMouse = () => {
@@ -39,6 +44,7 @@ export default function ProjectCard({
     setPokedexIsActive(false);
     setAnimalzIsActive(false);
     setKeskonregardeIsActive(true);
+    setDiscoveryIsActive(false);
   };
 
   const handleAnimalzMouse = () => {
@@ -47,6 +53,16 @@ export default function ProjectCard({
     setPokedexIsActive(false);
     setKeskonregardeIsActive(false);
     setAnimalzIsActive(true);
+    setDiscoveryIsActive(false);
+  };
+
+  const handleDiscoveryMouse = () => {
+    setCardIsActive(true);
+    setWildIsActive(false);
+    setPokedexIsActive(false);
+    setKeskonregardeIsActive(false);
+    setAnimalzIsActive(false);
+    setDiscoveryIsActive(true);
   };
 
   return (
@@ -101,6 +117,17 @@ export default function ProjectCard({
         }
       >
         <img src={animalz} alt="project-4" className={styles.projectImg} />
+      </li>
+      <li
+        className={styles.projectCard}
+        onMouseEnter={() => handleDiscoveryMouse()}
+        style={
+          discoveryIsActive
+            ? { transform: "translateY(-2rem)", transition: "0.4s ease-out" }
+            : null
+        }
+      >
+        <img src={discovery} alt="project-5" className={styles.projectImg} />
       </li>
     </ul>
   );

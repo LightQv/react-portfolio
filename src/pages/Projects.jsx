@@ -11,6 +11,7 @@ export default function Projects() {
   const [pokedexIsActive, setPokedexIsActive] = useState(false);
   const [keskonregardeIsActive, setKeskonregardeIsActive] = useState(false);
   const [animalzIsActive, setAnimalzIsActive] = useState(false);
+  const [discoveryIsActive, setDiscoveryIsActive] = useState(false);
   const [modalIsActive, setModalIsActive] = useState(false);
   const [codeIsHover, setCodeIsHover] = useState(false);
   const [liveIsHover, setLiveIsHover] = useState(false);
@@ -227,17 +228,54 @@ export default function Projects() {
             </div>
           </div>
         ) : null}
+        {discoveryIsActive ? (
+          <div className={styles.projectInfos}>
+            <div>
+              <div className={styles.topSection}>
+                <h2 className={styles.projectTitle}>Discovery</h2>
+                <h4 className={styles.projectStack}>
+                  React.js - Tailwind CSS - Express.js
+                </h4>
+              </div>
+              <p className={styles.projectDescription}>
+                is a Spotify client to center the most usefull datas from the
+                user account.
+              </p>
+            </div>
+            <div className={styles.linkSection}>
+              <a
+                href="https://github.com/LightQv/discovery"
+                target="_blank"
+                className={styles.projectLink}
+                onMouseEnter={() => setCodeIsHover(true)}
+                onMouseLeave={() => setCodeIsHover(false)}
+              >
+                Code
+                <BsCodeSlash
+                  className={styles.projectIcon}
+                  style={
+                    codeIsHover
+                      ? { color: "var(--white)" }
+                      : { color: "var(--black)" }
+                  }
+                />
+              </a>
+            </div>
+          </div>
+        ) : null}
       </section>
       <ProjectCard
         wildIsActive={wildIsActive}
         pokedexIsActive={pokedexIsActive}
         keskonregardeIsActive={keskonregardeIsActive}
         animalzIsActive={animalzIsActive}
+        discoveryIsActive={discoveryIsActive}
         setCardIsActive={setCardIsActive}
         setWildIsActive={setWildIsActive}
         setPokedexIsActive={setPokedexIsActive}
         setKeskonregardeIsActive={setKeskonregardeIsActive}
         setAnimalzIsActive={setAnimalzIsActive}
+        setDiscoveryIsActive={setDiscoveryIsActive}
       />
     </main>
   );
