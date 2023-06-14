@@ -14,19 +14,19 @@ export default function ProjectDescription({
       <div>
         <div className={styles.topSection}>
           <h2 className={styles.projectTitle}>
-            {projects[projectIsActive].name}
+            {projects[projectIsActive - 1].name}
           </h2>
-          <h4 className={styles.projectStack}>
-            {projects[projectIsActive].language}
-          </h4>
+          <p className={styles.projectDescription}>
+            {projects[projectIsActive - 1].description}
+          </p>
         </div>
-        <p className={styles.projectDescription}>
-          {projects[projectIsActive].description}
-        </p>
+        <h4 className={styles.projectStack}>
+          {projects[projectIsActive - 1].language.join(" - ")}
+        </h4>
       </div>
       <div className={styles.linkSection}>
         <a
-          href={projects[projectIsActive].code_source}
+          href={projects[projectIsActive - 1].code_source}
           target="_blank"
           className={styles.projectLink}
           onMouseEnter={() => setCodeIsHover(true)}
@@ -42,9 +42,9 @@ export default function ProjectDescription({
             }
           />
         </a>
-        {projects[projectIsActive].demo_link !== null ? (
+        {projects[projectIsActive - 1].demo_link !== null ? (
           <a
-            href={projects[projectIsActive].demo_link}
+            href={projects[projectIsActive - 1].demo_link}
             target="_blank"
             className={styles.projectLink}
             onMouseEnter={() => setLiveIsHover(true)}

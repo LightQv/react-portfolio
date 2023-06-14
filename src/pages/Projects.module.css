@@ -53,6 +53,7 @@
 
   .desktopLayout {
     display: initial;
+    position: relative;
   }
 
   .pageInfos {
@@ -89,6 +90,28 @@
     font-size: 1.25rem;
     font-weight: normal;
     font-style: italic;
+  }
+
+  .filterBox {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1.5rem;
+    left: 73rem;
+    font-weight: bold;
+    color: var(--white);
+  }
+
+  .filterTitle {
+    width: 5rem;
+  }
+
+  .selectBox {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    background-color: var(--white);
   }
 
   .projectCardBox {
