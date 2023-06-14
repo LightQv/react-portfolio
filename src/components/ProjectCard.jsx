@@ -11,14 +11,14 @@ export default function ProjectCard({
       key={index}
       className={styles.projectCard}
       style={
-        projectIsActive === index
+        projectIsActive === project.id
           ? {
               transform: "translateY(-2rem)",
               transition: "0.4s ease-in-out",
             }
           : null
       }
-      onClick={() => setProjectIsActive(index)}
+      onClick={() => setProjectIsActive(project.id)}
     >
       <img src={project.img} alt={project.name} className={styles.projectImg} />
     </li>

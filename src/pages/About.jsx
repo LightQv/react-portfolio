@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import profileImg from "../assets/image/profile-smile.jpg";
 import FlipCard from "../components/FlipCard";
 import { BsFillChatTextFill } from "react-icons/bs";
@@ -7,6 +8,7 @@ import { BsGithub } from "react-icons/bs";
 import styles from "./About.module.css";
 
 export default function About() {
+  const [isHover, setIsHover] = useState(false);
   return (
     <main className={styles.aboutPage}>
       <section className={styles.introductionBox}>

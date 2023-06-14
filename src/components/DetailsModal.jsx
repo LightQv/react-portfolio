@@ -16,7 +16,9 @@ export default function DetailsModal({
             <li key={index} className={styles.projectInfosContainer}>
               <h2 className={styles.projectTitle}>{project.name}</h2>
               <p className={styles.projectDescription}>{project.description}</p>
-              <h4 className={styles.projectStack}>{project.language}</h4>
+              <h4 className={styles.projectStack}>
+                {project.language.join(" - ")}
+              </h4>
               <div className={styles.linkSection}>
                 <a
                   href={project.code_source}

@@ -11,7 +11,7 @@ export const projects = [
     img: wildfest,
     description:
       "is a website for a music festival that allow the users to check every different artists and prices.",
-    language: "HTML - CSS - JavaScript",
+    language: ["HTML", "CSS", "JavaScript"],
     deployed: "gh-pages",
     code_source: "https://github.com/LightQv/Wild-Festival",
     demo_link:
@@ -22,7 +22,7 @@ export const projects = [
     name: "Pokedex",
     img: pokedex,
     description: "is an app which lists every Pokemon's datas sorted by areas.",
-    language: "React.js - CSS - Node.js",
+    language: ["React.js", "CSS", "Node.js"],
     deployed: "gh-pages",
     code_source: "https://github.com/LightQv/pokedex",
     demo_link: "https://lightqv.github.io/pokedex/",
@@ -33,7 +33,7 @@ export const projects = [
     img: keskonregarde,
     description:
       "is a search website that aim to help the users to find a movie to watch.",
-    language: "React.js - CSS - Node.js",
+    language: ["React.js", "CSS", "Node.js"],
     deployed: "Netlify",
     code_source: "https://github.com/LightQv/keskonregarde",
     demo_link: "https://lightqv-keskonregarde.netlify.app/",
@@ -44,7 +44,7 @@ export const projects = [
     img: animalz,
     description:
       "is a meeting app that help travelers to find a partner. Hackathon 24h proof of concept.",
-    language: "React.js - CSS - Node.js",
+    language: ["React.js", "CSS", "Node.js"],
     deployed: null,
     code_source: "https://github.com/LightQv/animalz",
     demo_link: null,
@@ -55,7 +55,7 @@ export const projects = [
     img: discovery,
     description:
       "is a Spotify client to center the most usefull datas from the user's account.",
-    language: "React.js - Tailwind CSS - Express.js",
+    language: ["React.js", "Tailwind CSS", "Express.js"],
     deployed: null,
     code_source: "https://github.com/LightQv/discovery",
     demo_link: null,
