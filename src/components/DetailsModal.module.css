@@ -25,6 +25,15 @@
   padding: 1.5rem;
 }
 
+.infosContainer {
+  overflow: auto;
+  margin-bottom: 1.5rem;
+}
+
+.projectInfosContainer:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
 .projectTitle {
   font-size: 1.25rem;
 }
@@ -32,11 +41,12 @@
 .projectDescription {
   font-size: 0.85rem;
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .projectStack {
   font-size: 0.85rem;
-  margin: 0.25rem 0;
+  margin: 0.25rem 0 0.25rem;
 }
 
 .linkSection {

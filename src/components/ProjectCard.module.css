@@ -1,9 +1,3 @@
-.projectCardBox {
-  display: flex;
-  width: 68.5rem;
-  padding: calc(var(--header) + 1rem) 2rem 1rem;
-}
-
 .projectCard {
   display: flex;
   flex-direction: column;
@@ -29,14 +23,6 @@
 
 @media screen and (min-width: 1024px) {
   /* Card */
-  .projectCardBox {
-    position: absolute;
-    top: 17rem;
-    right: calc(40% - calc(70dvh - 5.25rem));
-    width: fit-content;
-    padding: initial;
-  }
-
   .projectCard {
     height: calc(70dvh - 5.25rem);
     width: 17.5rem;
@@ -64,7 +50,7 @@
     border-radius: 1rem;
   }
 
-  /* pseudo class for fade-top & fade-left animation (68/78) */
+  /* pseudo class for fade-top & fade-left animation (53/64) */
   .projectCardBox::before {
     content: "";
     position: absolute;
