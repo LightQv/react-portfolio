@@ -9,6 +9,7 @@ export default function ProjectDescription({
 }) {
   const [codeIsHover, setCodeIsHover] = useState(false);
   const [liveIsHover, setLiveIsHover] = useState(false);
+
   return (
     <div className={styles.projectInfos}>
       <div>
