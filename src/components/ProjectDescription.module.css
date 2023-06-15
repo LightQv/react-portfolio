@@ -53,3 +53,31 @@
   height: 1.25rem;
   width: 1.25rem;
 }
+
+.projectLink:hover {
+  color: var(--white);
+}
+
+.projectLink:nth-child(1)::before,
+.projectLink:nth-child(2):before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+  background: var(--medium-yellow);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.projectLink:nth-child(1)::before {
+  left: 0;
+}
+
+.projectLink:nth-child(2)::before {
+  right: 0;
+}
+
+.projectLink:hover::before {
+  width: 100%;
+}
